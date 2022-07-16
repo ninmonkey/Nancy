@@ -1,0 +1,6 @@
+*.zip
+*.exe
+*.ansi
+*/.export
+*/.output
+

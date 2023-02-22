@@ -2,36 +2,67 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Pwsh Interactive Session",
+            "type": "PowerShell",
+            "request": "launch",
+            // H:\data\2023\pwsh\PsModules\Nancy\debugHarness.ps1
+            "cwd": "${cwd}"
+        },
+        {
             "name": ".NET Attach",
             "type": "coreclr",
             "request": "attach",
             "justMyCode": true,
+            "presentation": {
+                "hidden": false,
+                "group": "z",
+                "order": 1
+            }
         },
         {
             "name": ".NET Classic Attach",
             "type": "clr",
             "request": "attach",
             "justMyCode": true,
+            "presentation": {
+                "hidden": false,
+                "group": "z",
+                "order": 1
+            }
         },
         {
             "name": ".NET Attach (!jmc)",
             "type": "coreclr",
             "request": "attach",
             "justMyCode": false,
+            "presentation": {
+                "hidden": false,
+                "group": "z",
+                "order": 1
+            }
         },
         {
             "name": ".NET Classic Attach (!jmc)",
             "type": "clr",
             "request": "attach",
             "justMyCode": false,
+            "presentation": {
+                "hidden": false,
+                "group": "z",
+                "order": 1
+            }
         },
         {
             "name": "PowerShell Launch Current File",
             "type": "PowerShell",
             "request": "launch",
             "script": "${file}",
-            "cwd": "${file}"
+            "cwd": "${file}",
+            "presentation": {
+                "hidden": false,
+                "group": "z",
+                "order": 1
+            }
         },
     ]
 }
-

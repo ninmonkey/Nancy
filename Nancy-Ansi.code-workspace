@@ -9,11 +9,16 @@
     "launch": {
         "configurations": [
             {
-                "name": "Import-Module -Force 🐱‍🐉",
+                "name": "Import -Force 🐒.ps1",
                 "type": "PowerShell",
                 "request": "launch",
-                "script": "${workspaceFolder}/src/try.import.ps1",
-                "cwd": "${workspaceFolder}"
+                "script": "${workspaceFolder}/debugHarness.ps1",
+                "cwd": "${workspaceFolder}",
+                "presentation": {
+                    "hidden": false,
+                    "group": "a",
+                    "order": 1
+                }
                 //"prof"
                 //Import-Module .\src\Nancy.psm1 -Force -Verbose
             }

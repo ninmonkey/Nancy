@@ -1,3 +1,6 @@
+throw 'moving'
+
+
 'public', 'private' | ForEach-Object {
     # Resolve-Path -Path $PSScriptRoot -ChildPath { $_ }
     Resolve-Path (Join-Path $PSScriptRoot $_)

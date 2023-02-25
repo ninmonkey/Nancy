@@ -2,6 +2,7 @@
 
 [CmdletBinding()]
 param(
+    # This is Invoke-Build not ModuleBuilder
     [ValidateSet('Debug', 'Release')]
     [string] $Configuration = 'Debug',
 

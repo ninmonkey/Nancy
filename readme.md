@@ -11,6 +11,9 @@
 - [ClassExplorer/build.ps1](https://github.com/SeeminglyScience/ClassExplorer/blob/master/build.ps1)
 - [Module/*.psm1](https://github.com/SeeminglyScience/ClassExplorer/tree/master/module)
 - [Indented.Net.IP/build.ps1](https://github.com/indented-automation/Indented.Net.IP/blob/main/build.ps1)
+<!-- - [wiki: modulebuilder](ndler) -->
+- [invoke-build tasks cheatsheets](https://github.com/nightroman/Invoke-Build/wiki/Script-Tutorial#jobs-are-references-and-actions)
+- [Invoke-Build.Template](https://github.com/nightroman/Invoke-Build.template/tree/main/samples) examples
 
 ## module builder guidlelines
 

@@ -16,6 +16,8 @@
   - [ ] `CopyToRelease`
   - [ ] `DoTest`
   - [ ] any `*.cs`
+  - [ ] `launcher.json` [invoke for vs code](https://github.com/nightroman/Invoke-Build/wiki/Debugging-Tips)
+  - [ ] [invoke TaskFrom VSCode](https://github.com/nightroman/Invoke-Build/wiki/Invoke-Task-from-VSCode)
 
 - [ ] [module manifest metadata](https://learn.microsoft.com/en-us/powershell/scripting/gallery/concepts/package-manifest-affecting-ui?view=powershell-7.3)
 - [ ] [SemVar](https://learn.microsoft.com/en-us/powershell/scripting/gallery/concepts/publishing-guidelines?view=powershell-7.3#best-practices-for-publishing-packages)

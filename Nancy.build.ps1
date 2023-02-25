@@ -42,13 +42,13 @@ $script:Discovery = @{
     IsUnix        = $PSVersionTable.PSEdition -eq "Core" -and -not $IsWindows
 }
 
-<#
+
 $tools = "$PSScriptRoot\tools"
 $script:GetDotNet = Get-Command $tools\GetDotNet.ps1
 $script:AssertModule = Get-Command $tools\AssertRequiredModule.ps1
 $script:GetOpenCover = Get-Command $tools\GetOpenCover.ps1
 $script:GenerateSignatureMarkdown = Get-Command $tools\GenerateSignatureMarkdown.ps1
-#>
+
 task AssertDotNet {
     $script:dotnet = & $GetDotNet -Unix:$Discovery.IsUnix
 }
@@ -137,8 +137,6 @@ task CopyToRelease  {
     Copy-Item -Path $sourceCoreBin -Destination $releaseCoreBin -Force
 }
 
-<#
-
 task DoTest -If { $Discovery.HasTests -and $Settings.ShouldTest } {
     if ($Discovery.IsUnix) {
         $scriptString = '
@@ -196,6 +194,7 @@ task DoTest -If { $Discovery.HasTests -and $Settings.ShouldTest } {
     }
 }
 
+
 task DoInstall {
     $sourcePath  = '{0}\*' -f $Folders.Release
     $installBase = $Home
@@ -208,7 +207,6 @@ task DoInstall {
 
     Copy-Item -Path $sourcePath -Destination $installPath -Force -Recurse
 }
-#>
 
 task DoPublish {
     if ($Configuration -eq 'Debug') {

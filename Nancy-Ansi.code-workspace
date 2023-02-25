@@ -35,7 +35,21 @@
                 }
             },
             {
-                "name": "Invoke-Build 🐒",
+                "name": "Build-Module 🐒 concatenate", // concatenate
+                "type": "PowerShell",
+                "request": "launch",
+                "script": "pwsh -F ${workspaceFolder}/Source/build.psd1",
+                "cwd": "${workspaceFolder}/Source",
+                "presentation": {
+                    "hidden": false,
+                    "group": "aa",
+                    "order": 1
+                }
+                //"prof"
+                //Import-Module .\src\Nancy.psm1 -Force -Verbose
+            },
+            {
+                "name": "Invoke-Build 🐒 - build",
                 "type": "PowerShell",
                 "request": "launch",
                 "script": "Invoke-Build -Verbose",

@@ -1,9 +1,15 @@
+- [Easy List](#easy-list)
 - [Todo List](#todo-list)
 - [Code](#code)
 - [Other stuff](#other-stuff)
 
-## Todo List
+## Easy List
 
+- [ ] use templates for new modules <file:///https://github.com/PoshCode/ModuleBuilder/blob/main/Templates/Dotnet/ModuleBuilderModule/GitVersion.yml>
+  - [ ] easy: <https://github.com/PoshCode/ModuleBuilder/tree/main/Templates>
+
+## Todo List
+    
 - [ ] [plat shields](https://learn.microsoft.com/en-us/powershell/scripting/gallery/concepts/publishing-guidelines?view=powershell-7.4#tag-your-package-with-the-compatible-pseditions-and-platforms)
 - [ ] custom [`PSScriptAnalyzer` rules / skeleton](https://learn.microsoft.com/en-us/powershell/scripting/gallery/concepts/publishing-guidelines?view=powershell-7.3#use-psscriptanalyzer)
 - [ ] enable building in <file:///Nancy.build.ps1>
@@ -14,6 +20,7 @@
   - [ ] `Platypus`
   - [ ] `Pester`
   - [ ] `CopyToRelease`
+  
   - [ ] `DoTest`
   - [ ] any `*.cs`
   - [ ] `launcher.json` [invoke for vs code](https://github.com/nightroman/Invoke-Build/wiki/Debugging-Tips)

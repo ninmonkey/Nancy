@@ -64,17 +64,22 @@ function InvokeEveryUntilDuration {
     & $AfterDelayScriptBlock
 }
 
-$SbRandBlock = {
-    $script:iter++;
-    if (($iter % 20) -eq 0) {
-        ''
+<#
+function __animateEntrance {
+    $SbRandBlock = {
+        $script:iter++
+        if (($iter % 20) -eq 0) {
+            ''
+        }
+        $msg = (renderRandBock)
+        [console]::write( $msg )
     }
-    $msg = (renderRandBock)
-    [console]::write( $msg )
+
+    InvokeEvery 2000 10 { 'final' } $SbRandBlock
+    InvokeEvery 1200 20 { 'final' } {
+        $script:iter++
+        [Console]::write($iter)
+    }
 }
 
-InvokeEvery 2000 10 { 'final' } $SbRandBlock
-InvokeEvery 1200 20 { 'final' } {
-    $script:iter++
-    [Console]::write($iter)
-}
+#>

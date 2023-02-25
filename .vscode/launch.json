@@ -2,6 +2,23 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Debug Harness📌",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}/debugHarness.ps1",
+            "args": [
+                "-NoProfile"
+                // "-TestName",
+                // "Test-Get-All-Users",
+            ],
+            "cwd": "${workspaceFolder}",
+            "presentation": {
+                "hidden": false,
+                "group": "a",
+                "order": 1
+            }
+        },
+        {
             "name": "Pwsh Interactive Session",
             "type": "PowerShell",
             "request": "launch",

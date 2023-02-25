@@ -1,22 +1,39 @@
 {
     //-------- Files configuration --------
-
     // When enabled, will trim trailing whitespace when you save a file.
     "files.trimTrailingWhitespace": true,
-
     // When enabled, insert a final new line at the end of the file when saving it.
     "files.insertFinalNewline": true,
-
     "search.exclude": {
         "Release": true,
         "tools/dotnet": true,
         "tools/opencover": true
     },
-
     //-------- PowerShell Configuration --------
-
     // Use a custom PowerShell Script Analyzer settings file for this workspace.
     // Relative paths for this setting are always relative to the workspace root dir.
-    "powershell.scriptAnalysis.settingsPath": "ScriptAnalyzerSettings.psd1"
+    "powershell.scriptAnalysis.settingsPath": "ScriptAnalyzerSettings.psd1",
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Debug Harness📌",
+                "type": "PowerShell",
+                "request": "launch",
+                "script": "${workspaceFolder}/debugHarness.ps1",
+                "args": [
+                    "-NoProfile"
+                    // "-TestName",
+                    // "Test-Get-All-Users",
+                ],
+                "cwd": "${workspaceFolder}",
+                "presentation": {
+                    "hidden": false,
+                    "group": "a",
+                    "order": 1
+                }
+            }
+        ],
+        "compounds": []
+    }
 }
-

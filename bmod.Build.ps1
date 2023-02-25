@@ -3,6 +3,7 @@
     # ModuleManifest = ".\Source\Pansies.psd1"
     ModuleManifest = ".\Source\Nancy.psd1"
     # The rest of the paths are relative to the manifest
+    # SourcePath = $(Get-Location -PSProvider FileSystem)  # default
     OutputDirectory = "..\Output"
 
     # Semantic version, like 1.0.3-beta01+sha.22c35ffff166f34addc49a3b80e622b543199cc5
@@ -11,6 +12,7 @@
 # -SourceDirectories <String[]>
 #     Folders which contain source .ps1 scripts to be concatenated into the module
 #     Defaults to Enum, Classes, Private, Public
+
 
     PublicFilter = @( # [string[]]
         'Public\*.ps1' # default

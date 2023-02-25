@@ -2,6 +2,9 @@ class ConsoleCell {
     <#
     .SYNOPSIS
         Consists of one cell, or at least one glyph, with color
+    .notes
+        as a general case, <https://github.com/PoshCode/Pansies/tree/main/Docs>
+        color space Conversions: <https://github.com/PoshCode/Pansies/tree/main/Source/Assembly/ColorSpaces/Conversions>
     #>
     [object]$FG = 'gray80'
     [object]$BG = 'gray30'

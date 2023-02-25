@@ -8,20 +8,33 @@
     ],
     "launch": {
         "configurations": [
+            // {
+            //     "name": "Import -Force 🐒.ps1",
+            //     "type": "PowerShell",
+            //     "request": "launch",
+            //     "script": "enter path or command to execute e.g.: ${workspaceFolder}/src/foo.ps1 or Invoke-Pester",
+            //     "cwd": "${workspaceFolder}",
+            //     //
+            //     "presentation": {
+            //         "hidden": false,
+            //         "group": "aa",
+            //         "order": 1
+            //     }
+            // },
             {
-                "name": "Import -Force 🐒.ps1",
+                "name": "Invoke-Build 🐒",
                 "type": "PowerShell",
                 "request": "launch",
-                "script": "${workspaceFolder}/debugHarness.ps1",
+                "script": "Invoke-Build -Verbose",
                 "cwd": "${workspaceFolder}",
                 "presentation": {
                     "hidden": false,
-                    "group": "a",
+                    "group": "aa",
                     "order": 1
                 }
                 //"prof"
                 //Import-Module .\src\Nancy.psm1 -Force -Verbose
-            }
+            },
         ],
         "compounds": []
     },

@@ -128,13 +128,13 @@ task CopyToRelease  {
     $sourceCoreBin     = '{0}\netcoreapp3.1\publish\*' -f $Folders.Build
     Copy-Item -Path $powershellSource -Destination $release -Recurse -Force
 
-    if (-not $Discovery.IsUnix) {
-        $null = New-Item $releaseDesktopBin -Force -ItemType Directory
-        Copy-Item -Path $sourceDesktopBin -Destination $releaseDesktopBin -Force
-    }
+    # if (-not $Discovery.IsUnix) {
+    #     $null = New-Item $releaseDesktopBin -Force -ItemType Directory
+    #     Copy-Item -Path $sourceDesktopBin -Destination $releaseDesktopBin -Force
+    # }
 
-    $null = New-Item $releaseCoreBin -Force -ItemType Directory
-    Copy-Item -Path $sourceCoreBin -Destination $releaseCoreBin -Force
+    # $null = New-Item $releaseCoreBin -Force -ItemType Directory
+    # Copy-Item -Path $sourceCoreBin -Destination $releaseCoreBin -Force
 }
 
 task DoTest -If { $Discovery.HasTests -and $Settings.ShouldTest } {

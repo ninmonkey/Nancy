@@ -15,7 +15,7 @@
     ModuleVersion        = '0.0.1'
 
     # Supported PSEditions
-    CompatiblePSEditions = 'Core' # chunks work with either
+    CompatiblePSEditions = 'Core' # chunks work will work with either
 
     # ID used to uniquely identify this module
     GUID                 = '36d92ec6-dab7-407e-a682-3b119555082e'
@@ -69,7 +69,8 @@
     # NestedModules = @()
 
     # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-    FunctionsToExport    = '*'
+    # FunctionsToExport    = '*'
+    FunctionsToExport    = @('GetRandomColor', 'InvokeTimer.UntilDuration', 'Write-NancyHorizontalRule')
 
     # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
     CmdletsToExport      = '*'
@@ -78,7 +79,8 @@
     VariablesToExport    = '*'
 
     # Aliases to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no aliases to export.
-    AliasesToExport      = '*'
+    # AliasesToExport      = '*'
+    AliasesToExport      = @('Hr', 'Fmt->Rule')
 
     # DSC resources to export from this module
     # DscResourcesToExport = @()
@@ -103,6 +105,11 @@
 
             # A URL to the main website for this project.
             ProjectUri = 'https://github.com/ninmonkey/nancy'
+            Prerelease = 'source'
+            ReleaseNotes = '
+            First release and a few features ...
+            -
+            '
 
             # A URL to an icon representing this module.
             # IconUri = ''

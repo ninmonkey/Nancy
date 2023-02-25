@@ -1,6 +1,15 @@
 # Nancy | nAnsi | nin-Ansi
 
 
+## To Build
+
+```ps1
+cd ./Source
+./build.psd1
+
+```
+
+
 ## See More
 
 - Examples and TOC links at docs [System.Console\(\)](https://docs.microsoft.com/en-us/dotnet/api/System.Console?view=net-6.0#Streams)

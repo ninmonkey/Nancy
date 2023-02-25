@@ -22,6 +22,19 @@
             //     }
             // },
             {
+                "name": "Import Nancy🐒.ps1",
+                "type": "PowerShell",
+                "request": "launch",
+                "script": "${workspaceFolder}/src/try.import.ps1",
+                "cwd": "${workspaceFolder}",
+                //
+                "presentation": {
+                    "hidden": false,
+                    "group": "aa",
+                    "order": 1
+                }
+            },
+            {
                 "name": "Invoke-Build 🐒",
                 "type": "PowerShell",
                 "request": "launch",

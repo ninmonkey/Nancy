@@ -1,10 +1,11 @@
-@{
+$splatModule = @{
     Path = "Nancy.psd1"
     # ModuleManifest = ".\Source\Pansies.psd1"
     ModuleManifest = ".\Source\Nancy.psd1"
     # The rest of the paths are relative to the manifest
     # SourcePath = $(Get-Location -PSProvider FileSystem)  # default
     OutputDirectory = "..\Output"
+    SourcePath =
 
     # Semantic version, like 1.0.3-beta01+sha.22c35ffff166f34addc49a3b80e622b543199cc5
     # If the SemVer has metadata (after a +), then the full Semver will be added to the ReleaseNotes
@@ -75,3 +76,4 @@
 
 }
 
+Build-Module @splatModule -verbose -debug

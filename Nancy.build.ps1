@@ -48,11 +48,11 @@ $script:GetDotNet = Get-Command $tools\GetDotNet.ps1
 $script:AssertModule = Get-Command $tools\AssertRequiredModule.ps1
 $script:GetOpenCover = Get-Command $tools\GetOpenCover.ps1
 $script:GenerateSignatureMarkdown = Get-Command $tools\GenerateSignatureMarkdown.ps1
-
+#>
 task AssertDotNet {
     $script:dotnet = & $GetDotNet -Unix:$Discovery.IsUnix
 }
-
+<#
 task AssertOpenCover -If { $GenerateCodeCoverage.IsPresent } {
     if ($Discovery.IsUnix) {
         Write-Warning 'Generating code coverage from .NET core is currently unsupported, disabling code coverage generation.'
@@ -80,7 +80,7 @@ task AssertRequiredModules {
 
 task AssertDevDependencies -Jobs AssertDotNet, AssertOpenCover, AssertRequiredModules
 
-<#
+
 
 task Clean {
     if ($PSScriptRoot -and (Test-Path $PSScriptRoot\Release)) {
@@ -95,7 +95,7 @@ task Clean {
     $null = New-Item $Folders.Results -ItemType Directory
     & $dotnet clean --verbosity quiet -nologo
 }
-
+<#
 task BuildDocs -If { $Discovery.HasDocs } {
     $sourceDocs  = "$PSScriptRoot\docs\$PSCulture"
     $releaseDocs = '{0}\{1}' -f $Folders.Release, $PSCulture
@@ -118,7 +118,7 @@ task BuildDll {
     }
     & $dotnet publish --configuration $Configuration --framework netcoreapp3.1 --verbosity quiet -nologo
 }
-
+#>
 task CopyToRelease  {
     $powershellSource  = '{0}\*' -f $Folders.PowerShell
     $release           = $Folders.Release
@@ -136,7 +136,7 @@ task CopyToRelease  {
     $null = New-Item $releaseCoreBin -Force -ItemType Directory
     Copy-Item -Path $sourceCoreBin -Destination $releaseCoreBin -Force
 }
-#>
+
 <#
 
 task DoTest -If { $Discovery.HasTests -and $Settings.ShouldTest } {

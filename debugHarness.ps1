@@ -10,8 +10,8 @@ $PSStyle.OutputRendering = 'Ansi'
 # }
 Import-Module $ModPath -Force
 
-Get-Command -m Nancy
-| Sort-Object CommandType, Name
-| Format-Table Name -GroupBy CommandType
+# Get-Command -m Nancy
+# | Sort-Object CommandType, Name
+# | Format-Table Name -GroupBy CommandType
 
 'see also: "https://github.com/PoshCode/Pansies/blob/main/Source/Private/_init.ps1"'

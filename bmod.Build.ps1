@@ -1,21 +1,21 @@
 $splatModule = @{
-    Path = "Nancy.psd1"
+    Path              = 'Nancy.psd1'
     # ModuleManifest = ".\Source\Pansies.psd1"
-    ModuleManifest = ".\Source\Nancy.psd1"
+    ModuleManifest    = '.\Source\Nancy.psd1'
     # The rest of the paths are relative to the manifest
     # SourcePath = $(Get-Location -PSProvider FileSystem)  # default
-    OutputDirectory = "..\Output"
-    SourcePath =
+    OutputDirectory   = '..\Output'
+    SourcePath        = $(Get-Location -PSProvider FileSystem)  # default
 
     # Semantic version, like 1.0.3-beta01+sha.22c35ffff166f34addc49a3b80e622b543199cc5
     # If the SemVer has metadata (after a +), then the full Semver will be added to the ReleaseNotes
-#     # SemVer = ''  # [string]
-# -SourceDirectories <String[]>
-#     Folders which contain source .ps1 scripts to be concatenated into the module
-#     Defaults to Enum, Classes, Private, Public
+    #     # SemVer = ''  # [string]
+    # -SourceDirectories <String[]>
+    #     Folders which contain source .ps1 scripts to be concatenated into the module
+    #     Defaults to Enum, Classes, Private, Public
 
 
-    PublicFilter = @( # [string[]]
+    PublicFilter      = @( # [string[]]
         'Public\*.ps1' # default
     )
     SourceDirectories = @( # concatenated .ps1 scripts
@@ -24,12 +24,12 @@ $splatModule = @{
         'Private'
         'Public'
     )
-    CopyPaths = @()
+    CopyPaths         = @()
 
-    Passthru  = $true # returns [moduleInfo\]
-# -CopyPaths <String[]>
-#     Folders which should be copied intact to the module output
-#     Can be relative to the  module folde
+    Passthru          = $true # returns [moduleInfo\]
+    # -CopyPaths <String[]>
+    #     Folders which should be copied intact to the module output
+    #     Can be relative to the  module folde
     # Version = ''  # [version]
     #   The module version (must be a valid System.Version such as PowerShell supports for modules)
     # default: $(if(($V = $SemVer.Split("+")[0].Split("-",2)[0])){$V})
@@ -39,8 +39,8 @@ $splatModule = @{
     # BuildMetaData = @{}
     # If a value is provided here, then the full Semantic version will be inserted to the release notes:
     # Like: ModuleName v(Version(-Prerelease?)+BuildMetadata)
-    Encoding = 'UTF8'
-<#
+    Encoding          = 'UTF8'
+    <#
 
     -Target <String>
     Controls whether we delete the output folder and whether we build the output
@@ -76,4 +76,4 @@ $splatModule = @{
 
 }
 
-Build-Module @splatModule -verbose -debug
+Build-Module @splatModule -Verbose -Debug
